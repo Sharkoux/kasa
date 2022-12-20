@@ -1,14 +1,37 @@
 import { Link } from 'react-router-dom'
 import logo from '../asset/LOGO.png'
-//import '../styles/App.css'
+import styled from 'styled-components'
+
+const HeaderStyle = styled.header`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+`
+
+const StyledLink = styled(Link)`
+    color: #ff6060;
+    font-size: 24px;
+`
+
+const DivStyled = styled.div`
+    width: 310px;
+    display: flex;
+    justify-content: space-between;
+`
 
 function Header() {
     return (
-        <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <Link to="/">Accueil</Link>
-            <Link to="/Apropos">A propos</Link>
-        </header>
+        <HeaderStyle>
+            <img src={logo} alt="logo" />
+            <DivStyled>
+                <StyledLink to="/">Accueil</StyledLink>
+                <StyledLink to="/Apropos">A propos</StyledLink>
+            </DivStyled>
+        </HeaderStyle>
     )
 }
 

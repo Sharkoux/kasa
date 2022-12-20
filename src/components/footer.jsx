@@ -1,14 +1,28 @@
 import logo from '../asset/LOGOfooter.png'
-//import '../styles/App.css'
+import styled from 'styled-components'
+
+const FooterStyle = styled.footer`
+    background-color: black;
+    color: white;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+`
+
+
+
 
 function Footer() {
     return (
-        <footer className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
+        <FooterStyle >
+            <img src={logo} alt="logo" />
             <p>
-                <i></i>2020 Kasa. All rigths reserved
+                © 2020 Kasa. All rights reserved
             </p>
-        </footer>
+        </FooterStyle>
     )
 }
 
