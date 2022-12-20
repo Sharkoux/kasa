@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import logo from '../asset/banner.png'
 
 const DivBanner = styled.div`   
-    margin-left: 100px;
-    margin-right: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;

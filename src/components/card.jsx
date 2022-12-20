@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
+const StyleCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+`
 
-
-function Card({name}) {
+function Card({ name }) {
     return (
-        <div>
+        <StyleCard>
             <img src="" />
             <p>{name}</p>
-        </div>
+        </StyleCard>
     )
 }
 
