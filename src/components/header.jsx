@@ -10,6 +10,7 @@ const HeaderStyle = styled.header`
     margin-top: 50px;
     margin-left: 100px;
     margin-right: 100px;
+    margin-bottom: 80px
 `
 
 const StyledLink = styled(Link)`
