@@ -2,50 +2,40 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import Banner from '../components/banner'
 import Card from '../components/card'
+import Layout from '../components/layout'
 import styled from 'styled-components'
+import CallFetch from '../components/callFetch'
+import image from '../asset/banner.png'
 
+const texte = "Chez vous, partout et ailleurs"
 
 
 const DivHome = styled.div`
-  margin-left: 100px;
-  margin-right: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
 `
 
 const DivCard = styled.div`
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap
-    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    padding: 50px;
+    margin-bottom: 30px;
 `
 
-
-
-
 function Home() {
-    const [data, setData] = useState([])
-
-    const fetchData = () => {
-        fetch('logements.json')
-            .then((response) => response.json())
-            .then((actualData) => {
-                setData(actualData)
-            })
-            .catch((err) => {
-                console.log(err.message)
-            })
-    }
-
-    useEffect(() => {
-        fetchData()
-    }, [])
+    const { data } = CallFetch()
 
     return (
         <DivHome>
-            <Banner />
+            <Banner image={image} texte={texte} />
             <DivCard>
-            {data.map((item) => (
-                <Card key={item.id} name={item.title} />
-            ))}
+                {data.map((item) => (
+                    <Card key={item.id} name={item.title} image={item.cover} />
+                ))}
             </DivCard>
         </DivHome>
     )

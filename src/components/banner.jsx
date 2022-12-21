@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import logo from '../asset/banner.png'
+
 
 const DivBanner = styled.div`   
     display: flex;
@@ -12,7 +12,7 @@ const DivBanner = styled.div`
 const ImgBanner = styled.img`
     width: 100%;
     border-radius: 25px;
-    filter: brightness(90%)
+    filter: brightness(80%)
 `
 const TxtBanner = styled.p`
     position: absolute;
@@ -24,11 +24,11 @@ const TxtBanner = styled.p`
     margin: 0px;
 `
 
-function Banner() {
+function Banner({image, texte}) {
     return (
         <DivBanner>
-            <ImgBanner src={logo} alt="logo" />
-            <TxtBanner>Chez vous, partout et ailleurs</TxtBanner>
+            <ImgBanner src={image} alt="logo" />
+            <TxtBanner>{texte}</TxtBanner>
         </DivBanner>
     )
 }

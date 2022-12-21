@@ -2,8 +2,9 @@ import React from 'react';
 import {createRoot} from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home';
-import FicheLogement from './pages/FicheLogement';
+import FicheLogement from './pages/Apropos';
 import Layout from './components/layout';
+import Apropos from './pages/Apropos';
 
 
 const router = createBrowserRouter([
@@ -16,8 +17,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/test",
-        element: <FicheLogement />
+        path: "/Apropos",
+        element: <Apropos />
       }
     ],
   },

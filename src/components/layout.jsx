@@ -1,8 +1,10 @@
 import Header from './header'
 import Footer from './footer'
+import Home from '../pages/Home'
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
+import { useEffect, useState } from 'react'
 
 const GlobalStyle = createGlobalStyle`
    body {
@@ -10,15 +12,19 @@ const GlobalStyle = createGlobalStyle`
     margin: 0px;
     font-size: 24px;
    }
+   a {
+    text-decoration: none;
+   }
 `
 
-const Layout = ({ children }) => {
+const Layout = ({ children }) => { 
+    
     return (
         <React.Fragment>
             <GlobalStyle />
             <Header />
-            <main>
-                {children} <Outlet />{' '}
+            <main >
+               {children}<Outlet />{' '}
             </main>
             <Footer />
         </React.Fragment>
