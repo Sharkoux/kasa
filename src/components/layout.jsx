@@ -4,6 +4,7 @@ import Home from '../pages/Home'
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
+import CallFetch from './useCallFetch'
 import { useEffect, useState } from 'react'
 
 const GlobalStyle = createGlobalStyle`
@@ -15,16 +16,20 @@ const GlobalStyle = createGlobalStyle`
    a {
     text-decoration: none;
    }
+   *{
+    box-sizing: border-box;
+   }
+   
 `
 
-const Layout = ({ children }) => { 
-    
+const Layout = ({ children }) => {
     return (
         <React.Fragment>
             <GlobalStyle />
             <Header />
-            <main >
-               {children}<Outlet />{' '}
+            <main>
+                {children}
+                <Outlet />{' '}
             </main>
             <Footer />
         </React.Fragment>

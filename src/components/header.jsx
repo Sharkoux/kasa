@@ -25,7 +25,7 @@ function Header() {
     const navLinkStyle = ({ isActive }) => {
         return {
             textDecoration: isActive ? 'underline' : 'none',
-            color: 'red',
+            color: 'rgba(255, 96, 96, 1)',
         }
     }
 

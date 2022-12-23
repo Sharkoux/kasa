@@ -1,7 +1,8 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import Home from '../pages/Home'
 
-function CallFetch() {
+function useCallFetch() {
     const [data, setData] = useState([])
     const [error, setError] = useState(null)
 
@@ -19,7 +20,8 @@ function CallFetch() {
     useEffect(() => {
         fetchData()
     }, [])
-    return {data, error} 
+    console.log(data)
+    return { data, error }
 }
 
-export default CallFetch
+export default useCallFetch
