@@ -2,12 +2,15 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 
 
-function useCallOne() {
+ function useCallOne(id) {
     const [data, setData] = useState([])
+    const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
 
-    const fetchData = (id) => {
-        fetch('/logements.json')
+
+    useEffect(() => {
+         setLoading(true);
+         fetch('/logements.json')
             .then((response) => response.json())
             .then((actualData) => {
                 const data = actualData.find((item) => item.id === id)
@@ -16,10 +19,12 @@ function useCallOne() {
             .catch((err) => {
                 setError(err)
             })
-    }
-
-    console.log(data)
-    return { data, error, fetchData}
+            .finally(() => {
+                setLoading(false)
+            })
+    
+}, [])
+    return { data, loading, error}
 }
 
 export default useCallOne

@@ -6,23 +6,25 @@ import Carrousel from '../components/carrousel'
 import useCallOne from '../components/useCallOneLogement'
 
 const CtnCarrousel = styled.div`
-
+    margin-left: 100px;
+    margin-right: 100px;
 `
 
 function Logement() {
-    const {id} = useParams()
-    const {data, fetchData} = useCallOne()
-    
-  
-    useEffect(() => {
-        fetchData(id)
-    }, [])
+    const { id } = useParams();
+    const { data, loading, error } = useCallOne(id)
+
+    console.log(data)
 
     return (
         <div>
             <CtnCarrousel>
-            <Carrousel />
+                <Carrousel slides={data?.pictures} key={data?.id} />
             </CtnCarrousel>
+            <div>
+            <h1>{data.title}</h1>
+            <h2>{data.location}</h2>
+            </div>
         </div>
     )
 }

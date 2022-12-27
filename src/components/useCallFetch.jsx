@@ -20,7 +20,6 @@ function useCallFetch() {
     useEffect(() => {
         fetchData()
     }, [])
-    console.log(data)
     return { data, error }
 }
 

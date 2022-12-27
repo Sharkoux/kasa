@@ -1,47 +1,84 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import CallFetch from './useCallFetch'
-import banner from '../asset/banner.png'
-import apropos from '../asset/Apropos.png'
+import arrow from '../asset/arrowCaroussel.png'
 
 const DivCarrousel = styled.div`
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    height: 400px;
+    .slideContainer {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+        position: relative;
+        overflow: hidden;
+    }
+    .slideImage {
+        height: 410px;
+        width: 1740px;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+    .imgCount {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        color: white;
+    }
 `
 
 const Arrow = styled.button`
     position: absolute;
-    background-color: red;
-    left: 50%;
-    top: 50%;
-    width: 30px;
-    height: 30px;
+    background: transparent;
+    border: transparent;
     cursor: pointer;
+    top: 40%;
+    right: 80px;
+`
+const ArrowTwo = styled(Arrow)`
+    left: 100px;
+    transform: rotate(180deg);
+    right: auto;
 `
 
-function Carrousel() {
-    const data = ['1', '2', '3']
+function Carrousel({ slides }) {
     const [currentIndex, setCurrentIndex] = useState(0)
+    const length = slides?.length
 
-    useEffect(() => {})
+    const nextSlide = () => {
+        setCurrentIndex(currentIndex === length - 1 ? 0 : currentIndex + 1)
+    }
+
+    const previousSlide = () => {
+        setCurrentIndex(currentIndex === 0 ? length - 1 : currentIndex - 1)
+    }
+
+    if (!Array.isArray(slides) || slides.length <= 0) {
+        return null
+    }
 
     return (
         <DivCarrousel>
-            {data.map((item, index) => {
+            <Arrow onClick={nextSlide}>
+                <img src={arrow}></img>
+            </Arrow>
+            <ArrowTwo onClick={previousSlide}>
+                <img src={arrow}></img>
+            </ArrowTwo>
+            {slides.map((item, index) => {
                 return (
-                    <div
-                        style={{
-                            transform: `translate(-${currentIndex * 100}%)`,
-                        }}
-                        key={index}
-                    >
-                        {item}
+                    <div key={index}>
+                        {index === currentIndex && (
+                            <img
+                                className="slideImage"
+                                src={item}
+                                index={index}
+                            ></img>
+                        )}
                     </div>
                 )
             })}
-            <Arrow onClick={() => setCurrentIndex(currentIndex + 1)}></Arrow>
+            <p className="imgCount">
+                {currentIndex}/{length}
+            </p>
         </DivCarrousel>
     )
 }
