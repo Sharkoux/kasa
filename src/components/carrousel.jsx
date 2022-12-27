@@ -13,7 +13,7 @@ const DivCarrousel = styled.div`
     }
     .slideImage {
         height: 410px;
-        width: 1740px;
+        width: 1703px;
         object-fit: cover;
         border-radius: 25px;
     }
@@ -31,7 +31,7 @@ const Arrow = styled.button`
     border: transparent;
     cursor: pointer;
     top: 40%;
-    right: 80px;
+    right: 100px;
 `
 const ArrowTwo = styled(Arrow)`
     left: 100px;
@@ -77,7 +77,7 @@ function Carrousel({ slides }) {
                 )
             })}
             <p className="imgCount">
-                {currentIndex}/{length}
+                {currentIndex + 1}/{length}
             </p>
         </DivCarrousel>
     )

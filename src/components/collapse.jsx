@@ -2,11 +2,9 @@ import styled from 'styled-components'
 import arrow from '../asset/arrow.png'
 import React, { useState } from 'react'
 
-
 const DivCollapse = styled.div`
-    margin-left: 100px;
-    margin-right: 100px;
     margin-bottom: 50px;
+    width: 100%
 `
 
 const BtnCollapse = styled.button`
@@ -33,9 +31,7 @@ const TxtCollapse = styled.p`
     margin: 0;
 `
 const ArrowCollapse = styled.img`
-    ${(props) =>
-        props.open &&
-        `transform: rotate(180deg)`}
+    ${(props) => props.open && `transform: rotate(180deg)`}
 `
 
 function Collapse({ titre, texte }) {
