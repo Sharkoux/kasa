@@ -9,18 +9,16 @@ const FooterStyle = styled.footer`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    width: 100%;
+    left: 0
 `
-
-
-
 
 function Footer() {
     return (
-        <FooterStyle >
+        <FooterStyle>
             <img src={logo} alt="logo" />
-            <p>
-                © 2020 Kasa. All rights reserved
-            </p>
+            <p>© 2020 Kasa. All rights reserved</p>
         </FooterStyle>
     )
 }

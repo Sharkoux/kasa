@@ -7,8 +7,6 @@ import Apropos from './pages/Apropos'
 import Erreur from './pages/Erreur'
 import Logement from './pages/Logement'
 
-
-
 const router = createBrowserRouter([
     {
         path: '/',
@@ -23,8 +21,9 @@ const router = createBrowserRouter([
                 element: <Apropos />,
             },
             {
-                path: "/logement/:id",
-                element: <Logement />
+                path: '/logement/:id',
+                element: <Logement />,
+                errorElement: <Erreur />,
             },
             {
                 path: '*',

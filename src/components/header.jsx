@@ -9,16 +9,36 @@ const HeaderStyle = styled.header`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 80px;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @media only screen and (max-width: 768px) {
+        margin: 20px;
+        padding-bottom: 0px;
+    }
+    @media only screen and (max-width: 425px) {
+        margin: 5px;
+    }
+    .HeaderImg {
+        @media only screen and (max-width: 768px) {
+            width: 145px;
+        }
+        @media only screen and (max-width: 425px) {
+            width: 120px;
+        }
+    }
 `
 
 const DivStyled = styled.div`
-    width: 310px;
     display: flex;
-    justify-content: space-between;
+    gap: 25px;
+    @media only screen and (max-width: 768px) {
+        font-size: 20px;
+    }
+    @media only screen and (max-width: 425px) {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
 `
 
 function Header() {
@@ -31,7 +51,7 @@ function Header() {
 
     return (
         <HeaderStyle>
-            <img src={logo} alt="logo" />
+            <img className="HeaderImg" src={logo} alt="logo" />
             <DivStyled>
                 <NavLink to="/" style={navLinkStyle}>
                     <p>Accueil</p>

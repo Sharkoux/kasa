@@ -7,12 +7,11 @@ import styled from 'styled-components'
 import useCallFetch from '../components/useCallFetch'
 import image from '../asset/banner.png'
 
-const DivHome = styled.div`
-    margin-left: 100px;
-    margin-right: 100px;
+const HomeContainer = styled.div`
+    padding: 20px;
 `
 
-const DivCard = styled.div`
+const HomeCard = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -21,15 +20,18 @@ const DivCard = styled.div`
     padding: 50px;
     margin-bottom: 30px;
     gap: 5%;
-`
+    @media only screen and (max-width: 768px) {
+        padding: 25px;
+     }
+     `
 
 function Home() {
     const { data } = useCallFetch()
 
     return (
-        <DivHome>
+        <HomeContainer>
             <Banner image={image} texte="Chez vous, partout et ailleurs" />
-            <DivCard>
+            <HomeCard>
                 {data.map((item) => (
                     <Card
                         key={item.id}
@@ -38,8 +40,8 @@ function Home() {
                         image={item.cover}
                     />
                 ))}
-            </DivCard>
-        </DivHome>
+            </HomeCard>
+        </HomeContainer>
     )
 }
 

@@ -13,7 +13,7 @@ const DivCarrousel = styled.div`
     }
     .slideImage {
         height: 410px;
-        width: 1703px;
+        width: 1670px;
         object-fit: cover;
         border-radius: 25px;
     }
@@ -31,10 +31,10 @@ const Arrow = styled.button`
     border: transparent;
     cursor: pointer;
     top: 40%;
-    right: 100px;
+    right: 130px;
 `
 const ArrowTwo = styled(Arrow)`
-    left: 100px;
+    left: 130px;
     transform: rotate(180deg);
     right: auto;
 `

@@ -9,8 +9,7 @@ import Star from '../components/star'
 import Collapse from '../components/collapse'
 
 const CtnLogement = styled.div`
-    margin-left: 100px;
-    margin-right: 100px;
+    padding: 20px;
     margin-bottom: 100px;
     color: #ff6060;
     .title {
@@ -53,8 +52,8 @@ const CtnCollapse = styled.div`
 
 function Logement() {
     const { id } = useParams()
-    const { data } = useCallOne(id)
-    console.log(data)
+    const { data, error } = useCallOne(id)
+    console.log(id)
     return (
         <CtnLogement>
             <div>

@@ -10,7 +10,13 @@ const StyleCard = styled(Link)`
     position: relative;
     margin-bottom: 50px;
     height: 360px;
-    
+    @media only screen and (max-width: 768px) {
+        width: 47%
+    }
+    @media only screen and (max-width: 425px) {
+        width: 100%
+
+    }
    `
 
 const StyleImg = styled.img`
@@ -20,7 +26,7 @@ const StyleImg = styled.img`
 `
 const Styletxt = styled.p`
     position: absolute;
-    top: 80%;
+    bottom: 0;
     margin: 20px;
     color: white;
     font-size: 18px;

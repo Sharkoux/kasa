@@ -6,13 +6,21 @@ const DivBanner = styled.div`
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
-    position: relative
+    position: relative;
+    @media only screen and (max-width: 768px) {
+        height: 150px
+     }
+    @media only screen and (max-width: 425px) {
+        height: 120px;
+     }
 `
 
 const ImgBanner = styled.img`
     width: 100%;
     border-radius: 25px;
-    filter: brightness(80%)
+    filter: brightness(80%);
+    height: 100%;
+    
 `
 const TxtBanner = styled.p`
     position: absolute;
@@ -21,7 +29,17 @@ const TxtBanner = styled.p`
     transform: translate(-50%,-50%);
     font-size: 48px;
     color: white;
-    margin: 0px;
+    margin: auto;
+    width: 70%;
+    padding-left: 10%;
+    @media only screen and (max-width: 768px) {
+        font-size: 24px;
+     }
+     @media only screen and (max-width: 425px) {
+        font-size: 20px;
+        text-align: left;
+        padding: 0;
+     }
 `
 
 function Banner({image, texte}) {
