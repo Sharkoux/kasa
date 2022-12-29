@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 const DivCollapse = styled.div`
     margin-bottom: 50px;
-    width: 100%
+    width: 100%;
 `
 
 const BtnCollapse = styled.button`
@@ -29,6 +29,10 @@ const DivTxt = styled.div`
 
 const TxtCollapse = styled.p`
     margin: 0;
+    color: #ff6060;
+    @media only screen and (max-width: 425px) {
+        font-size: 14px;
+    }
 `
 const ArrowCollapse = styled.img`
     ${(props) => props.open && `transform: rotate(180deg)`}

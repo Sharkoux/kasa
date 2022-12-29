@@ -11,7 +11,8 @@ const FooterStyle = styled.footer`
     align-items: center;
     position: absolute;
     width: 100%;
-    left: 0
+    left: 0;
+    text-align: center
 `
 
 function Footer() {

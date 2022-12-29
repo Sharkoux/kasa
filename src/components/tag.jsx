@@ -9,11 +9,13 @@ const CtnTag = styled.div`
         padding-right: 40px;
         background-color: #ff6060;
         color: white;
-        height: 25px;
+        min-height: 25px;
         margin-right: 10px;
         display: flex;
         align-items: center;
         border-radius: 10px;
+        text-align: center;
+     
     }
 
 `

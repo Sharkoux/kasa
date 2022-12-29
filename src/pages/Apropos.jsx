@@ -8,6 +8,16 @@ const DivApropos = styled.div`
     .CtnCollapse {
         margin-left: 100px;
         margin-right: 100px;
+        @media only screen and (max-width: 768px) {
+            margin-left: 40px;
+            margin-right: 40px;
+     
+         }
+        @media only screen and (max-width: 425px) {
+           margin-left: 20px;
+           margin-right: 20px
+    
+        }
     }
 `
 const titre = ['Fiablité', 'Respect', 'Service', 'Responsabilité']

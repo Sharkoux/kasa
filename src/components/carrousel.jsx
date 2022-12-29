@@ -4,6 +4,8 @@ import arrow from '../asset/arrowCaroussel.png'
 
 const DivCarrousel = styled.div`
     display: flex;
+    width: 100%;
+    flex-wrap: wrap;
     .slideContainer {
         display: flex;
         align-items: center;
@@ -12,16 +14,29 @@ const DivCarrousel = styled.div`
         overflow: hidden;
     }
     .slideImage {
-        height: 410px;
-        width: 1670px;
+        height: 400px;
         object-fit: cover;
         border-radius: 25px;
+        width: 100%;
+        @media only screen and (max-width: 425px) {
+            height: 350px;
+        }
     }
     .imgCount {
         position: absolute;
-        top: 55%;
+        top: 65%;
         left: 50%;
         color: white;
+        @media only screen and (max-width: 768px) {
+            top: 55%;
+        }
+        @media only screen and (max-width: 425px) {
+            top: 45%;
+            left: 47%;
+        }
+    }
+    .containerImage {
+        width: 100%;
     }
 `
 
@@ -30,13 +45,33 @@ const Arrow = styled.button`
     background: transparent;
     border: transparent;
     cursor: pointer;
-    top: 40%;
+    top: 45%;
     right: 130px;
+    @media only screen and (max-width: 768px) {
+        top: 35%;
+        right: 50px;
+    }
+    @media only screen and (max-width: 425px) {
+        top: 30%;
+        right: 30px;
+    }
+
+    .arrowImg {
+        @media only screen and (max-width: 768px) {
+            height: 60px;
+        }
+        @media only screen and (max-width: 425px) {
+            height: 30px;
+        }
+    }
 `
 const ArrowTwo = styled(Arrow)`
     left: 130px;
     transform: rotate(180deg);
     right: auto;
+    @media only screen and (max-width: 768px) {
+        left: 50px;
+    }
 `
 
 function Carrousel({ slides }) {
@@ -58,14 +93,14 @@ function Carrousel({ slides }) {
     return (
         <DivCarrousel>
             <Arrow onClick={nextSlide}>
-                <img src={arrow}></img>
+                <img className="arrowImg" src={arrow}></img>
             </Arrow>
             <ArrowTwo onClick={previousSlide}>
-                <img src={arrow}></img>
+                <img className="arrowImg" src={arrow}></img>
             </ArrowTwo>
             {slides.map((item, index) => {
                 return (
-                    <div key={index}>
+                    <div className="containerImage" key={index}>
                         {index === currentIndex && (
                             <img
                                 className="slideImage"
