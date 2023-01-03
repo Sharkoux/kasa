@@ -15,22 +15,26 @@ const CtnTag = styled.div`
         align-items: center;
         border-radius: 10px;
         text-align: center;
-     
+        @media only screen and (max-width: 768px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        @media only screen and (max-width: 425px) {
+            font-size: 12px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
-
 `
 
-
-
-
-function Tag({tag}) {
-    
-    
+function Tag({ tag }) {
     return (
         <CtnTag>
-        {tag?.map((item, index) => (
-            <p className='tag' key={index}>{item}</p>
-        ))}
+            {tag?.map((item, index) => (
+                <p className="tag" key={index}>
+                    {item}
+                </p>
+            ))}
         </CtnTag>
     )
 }

@@ -20,6 +20,12 @@ const BtnCollapse = styled.button`
     align-items: center;
     cursor: pointer;
     padding: 10px;
+    @media only screen and (max-width: 768px) {
+        font-size: 22px;
+    }
+    @media only screen and (max-width: 425px) {
+        font-size: 19px;
+    }
 `
 const DivTxt = styled.div`
     background-color: #f6f6f6;
@@ -27,7 +33,7 @@ const DivTxt = styled.div`
     padding: 30px;
 `
 
-const TxtCollapse = styled.p`
+const TxtCollapse = styled.div`
     margin: 0;
     color: #ff6060;
     @media only screen and (max-width: 425px) {

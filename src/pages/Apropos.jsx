@@ -29,8 +29,8 @@ function Apropos() {
         <DivApropos>
             <Banner image={image} />
             <div className="CtnCollapse">
-                {titre.map((item) => (
-                    <Collapse titre={item} texte={text} />
+                {titre.map((item, index) => (
+                    <Collapse titre={item} texte={text} key={index}/>
                 ))}
             </div>
         </DivApropos>

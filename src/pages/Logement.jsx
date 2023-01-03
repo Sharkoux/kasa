@@ -24,22 +24,45 @@ const CtnLogement = styled.div`
 `
 const CtnProfils = styled.div`
     display: flex;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+     }
     .ctnTitle {
         width: 50%;
+        @media only screen and (max-width: 768px) {
+           width: 100%;
+    
+         }
     }
     .ctnpstar {
         width: 50%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+          }
     }
     .ctnProfil {
         display: flex;
         align-items: center;
+        @media only screen and (max-width: 425px) {
+            font-size: 20px;
+            }
     }
     .imgProfil {
         border-radius: 50%;
         margin: 10px;
+        @media only screen and (max-width: 768px) {
+            height: 100px;
+        }
+        @media only screen and (max-width: 425px) {
+           height: 80px;
+            }
     }
 `
 
@@ -48,12 +71,16 @@ const CtnCollapse = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 200px;
+    @media only screen and (max-width: 768px) {
+      gap: 40px;
+      flex-direction: column;
+      }
 `
 
 function Logement() {
     const { id } = useParams()
     const { data, error } = useCallOne(id)
-    console.log(id)
+
     return (
         <CtnLogement>
             <div>
@@ -80,8 +107,8 @@ function Logement() {
                 <Collapse titre="Description" texte={data.description} />
                 <Collapse
                     titre="Equipements"
-                    texte={data.equipments?.map((item) => {
-                        return <p>{item}</p>
+                    texte={data.equipments?.map((item, index) => {
+                        return <div key={index}><p>{item}</p></div>
                     })}
                 />
             </CtnCollapse>
