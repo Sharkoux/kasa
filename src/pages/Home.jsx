@@ -1,8 +1,6 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
 import Banner from '../components/banner'
 import Card from '../components/card'
-import Layout from '../components/layout'
 import styled from 'styled-components'
 import useCallFetch from '../components/useCallFetch'
 import image from '../asset/banner.png'
@@ -22,14 +20,14 @@ const HomeCard = styled.div`
     gap: 5%;
     @media only screen and (max-width: 768px) {
         padding: 25px;
-     }
-     `
+    }
+`
 
 function Home() {
     /* Call data from Json */
     const { data } = useCallFetch()
 
-    /* Return Home container with Banner and map data to card component */ 
+    /* Return Home container with Banner and map data to card component */
     return (
         <HomeContainer>
             <Banner image={image} texte="Chez vous, partout et ailleurs" />

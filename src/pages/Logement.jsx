@@ -1,5 +1,4 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import Carrousel from '../components/carrousel'
@@ -27,13 +26,12 @@ const CtnProfils = styled.div`
     flex-wrap: wrap;
     @media only screen and (max-width: 768px) {
         flex-direction: column;
-     }
+    }
     .ctnTitle {
         width: 50%;
         @media only screen and (max-width: 768px) {
-           width: 100%;
-    
-         }
+            width: 100%;
+        }
     }
     .ctnpstar {
         width: 50%;
@@ -45,14 +43,14 @@ const CtnProfils = styled.div`
             flex-direction: row-reverse;
             justify-content: space-between;
             align-items: center;
-          }
+        }
     }
     .ctnProfil {
         display: flex;
         align-items: center;
         @media only screen and (max-width: 425px) {
             font-size: 20px;
-            }
+        }
     }
     .imgProfil {
         border-radius: 50%;
@@ -61,8 +59,8 @@ const CtnProfils = styled.div`
             height: 100px;
         }
         @media only screen and (max-width: 425px) {
-           height: 80px;
-            }
+            height: 80px;
+        }
     }
 `
 
@@ -72,16 +70,15 @@ const CtnCollapse = styled.div`
     justify-content: space-between;
     gap: 200px;
     @media only screen and (max-width: 768px) {
-      gap: 40px;
-      flex-direction: column;
-      }
+        gap: 40px;
+        flex-direction: column;
+    }
 `
 /* Page Logement */
 function Logement() {
     /* Call id with useParams and call data with useCallOne */
     const { id } = useParams()
-    const { data, error } = useCallOne(id)
-
+    const { data } = useCallOne(id)
 
     /* With data, generate page logement and all children component */
     return (
@@ -99,6 +96,7 @@ function Logement() {
                     <div className="ctnProfil">
                         <p>{data.host?.name}</p>
                         <img
+                            alt="profilImg"
                             className="imgProfil"
                             src={data.host?.picture}
                         ></img>
@@ -111,7 +109,11 @@ function Logement() {
                 <Collapse
                     titre="Equipements"
                     texte={data.equipments?.map((item, index) => {
-                        return <div key={index}><p>{item}</p></div>
+                        return (
+                            <div key={index}>
+                                <p>{item}</p>
+                            </div>
+                        )
                     })}
                 />
             </CtnCollapse>

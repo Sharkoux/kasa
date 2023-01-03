@@ -1,18 +1,17 @@
 import styled from 'styled-components'
 
-
-const DivBanner = styled.div`   
+const DivBanner = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
     position: relative;
     @media only screen and (max-width: 768px) {
-        height: 150px
-     }
+        height: 150px;
+    }
     @media only screen and (max-width: 425px) {
         height: 120px;
-     }
+    }
 `
 
 const ImgBanner = styled.img`
@@ -20,13 +19,12 @@ const ImgBanner = styled.img`
     border-radius: 25px;
     filter: brightness(80%);
     height: 100%;
-    
 `
 const TxtBanner = styled.p`
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 47px;
     color: white;
     margin: auto;
@@ -34,17 +32,17 @@ const TxtBanner = styled.p`
     padding-left: 10%;
     @media only screen and (max-width: 768px) {
         font-size: 24px;
-     }
-     @media only screen and (max-width: 425px) {
+    }
+    @media only screen and (max-width: 425px) {
         font-size: 20px;
         text-align: left;
         padding: 0;
-     }
+    }
 `
 
-/* Banner component */ 
+/* Banner component */
 
-function Banner({image, texte}) {
+function Banner({ image, texte }) {
     return (
         <DivBanner>
             <ImgBanner src={image} alt="logo" />

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import arrow from '../asset/arrowCaroussel.png'
 
@@ -92,14 +92,17 @@ function Carrousel({ slides }) {
         return null
     }
    
+    if(slides.length === 1) {
+
+    }
     /* return Slider with button + and -, and counter*/
      return (
         <DivCarrousel>
-            <ArrowTwo onClick={previousSlide}>
-                <img className="arrowImg" src={arrow}></img>
+            <ArrowTwo classonClick={previousSlide}>
+                <img className="arrowImg" src={arrow} alt="arrowRigth"></img>
             </ArrowTwo>
             <Arrow onClick={nextSlide}>
-                <img className="arrowImg" src={arrow}></img>
+                <img className="arrowImg" src={arrow} alt="arrowLeft"></img>
             </Arrow>
             {slides.map((item, index) => {
                 return (
@@ -109,6 +112,7 @@ function Carrousel({ slides }) {
                                 className="slideImage"
                                 src={item}
                                 index={index}
+                                alt="imgCarrousel"
                             ></img>
                         )}
                     </div>

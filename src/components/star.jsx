@@ -1,15 +1,15 @@
 import styled from 'styled-components'
-import React, { useState } from 'react'
+import React from 'react'
 import StarON from '../asset/StarOn.png'
 import StarOff from '../asset/star.png'
 
 const ImgStar = styled.img`
     height: 36px;
     @media only screen and (max-width: 768px) {
-        height: 30px
+        height: 30px;
     }
     @media only screen and (max-width: 425px) {
-        height: 20px
+        height: 20px;
     }
 `
 const CtnStar = styled.div`

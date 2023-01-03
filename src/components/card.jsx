@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Routes, Route, useParams } from 'react-router-dom';
 
 
 const StyleCard = styled(Link)`
@@ -11,13 +10,12 @@ const StyleCard = styled(Link)`
     margin-bottom: 50px;
     height: 360px;
     @media only screen and (max-width: 768px) {
-        width: 47%
+        width: 47%;
     }
     @media only screen and (max-width: 425px) {
-        width: 100%
-
+        width: 100%;
     }
-   `
+`
 
 const StyleImg = styled.img`
     object-fit: cover;
@@ -32,15 +30,13 @@ const Styletxt = styled.p`
     font-size: 18px;
 `
 
-/* Card component */ 
+/* Card component */
 
-function Card({ name, image, id}) {
-    
-    
+function Card({ name, image, id }) {
     return (
         <StyleCard to={`/logement/${id}`}>
             <StyleImg src={image} />
-            <Styletxt>{name}</Styletxt>{" "}
+            <Styletxt>{name}</Styletxt>{' '}
         </StyleCard>
     )
 }

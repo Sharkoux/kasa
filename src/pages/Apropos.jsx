@@ -11,16 +11,14 @@ const DivApropos = styled.div`
         @media only screen and (max-width: 768px) {
             margin-left: 40px;
             margin-right: 40px;
-     
-         }
+        }
         @media only screen and (max-width: 425px) {
-           margin-left: 20px;
-           margin-right: 20px
-    
+            margin-left: 20px;
+            margin-right: 20px;
         }
     }
 `
-/* Generate data  */ 
+/* Generate data  */
 const titre = ['Fiablité', 'Respect', 'Service', 'Responsabilité']
 const text =
     'Ex turba vero imae sortis et paupertinae in tabernis aliqui pernoctant vinariis, non nulli velariis umbraculorum theatralium latent, quae Campanam imitatus lasciviam Catulus in aedilitate sua suspendit omnium primus; aut pugnaciter aleis certant turpi sono fragosis naribus introrsum reducto spiritu concrepantes; aut quod est studiorum omnium maximum ab ortu lucis ad vesperam sole fatiscunt vel pluviis, per minutias aurigarum equorumque praecipua vel delicta scrutantes.'
@@ -32,7 +30,7 @@ function Apropos() {
             <Banner image={image} />
             <div className="CtnCollapse">
                 {titre.map((item, index) => (
-                    <Collapse titre={item} texte={text} key={index}/>
+                    <Collapse titre={item} texte={text} key={index} />
                 ))}
             </div>
         </DivApropos>

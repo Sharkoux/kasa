@@ -12,7 +12,7 @@ const FooterStyle = styled.footer`
     position: absolute;
     width: 100%;
     left: 0;
-    text-align: center
+    text-align: center;
 `
 /* Footer component */
 function Footer() {

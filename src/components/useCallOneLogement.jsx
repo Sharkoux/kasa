@@ -1,14 +1,10 @@
-import React from 'react'
 import { useEffect, useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
-import Erreur from '../pages/Erreur'
 
 /* hook for fetch data from json */
 
 function useCallOne(id) {
     const [data, setData] = useState([])
     const [error, setError] = useState(null)
-    let navigate = useNavigate()
 
     useEffect(() => {
         fetch('/logements.json')
@@ -22,7 +18,7 @@ function useCallOne(id) {
             .catch((err) => {
                 setError(err)
             })
-    }, [])
+    })
     return { data, error }
 }
 
