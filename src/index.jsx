@@ -7,6 +7,8 @@ import Apropos from './pages/Apropos'
 import Erreur from './pages/Erreur'
 import Logement from './pages/Logement'
 
+
+/* create router (layout and all path children) */ 
 const router = createBrowserRouter([
     {
         path: '/',

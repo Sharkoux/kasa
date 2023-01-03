@@ -42,6 +42,8 @@ const TxtBanner = styled.p`
      }
 `
 
+/* Banner component */ 
+
 function Banner({image, texte}) {
     return (
         <DivBanner>

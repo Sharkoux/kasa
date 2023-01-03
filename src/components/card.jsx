@@ -32,6 +32,8 @@ const Styletxt = styled.p`
     font-size: 18px;
 `
 
+/* Card component */ 
+
 function Card({ name, image, id}) {
     
     

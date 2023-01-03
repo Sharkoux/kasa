@@ -16,6 +16,7 @@ const CtnStar = styled.div`
     margin-top: 20px;
 `
 
+/*  Component star, generate star with rating data */
 function Star({ rating }) {
     const totalStar = 5
     const actStar = rating

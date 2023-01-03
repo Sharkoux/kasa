@@ -14,7 +14,7 @@ const FooterStyle = styled.footer`
     left: 0;
     text-align: center
 `
-
+/* Footer component */
 function Footer() {
     return (
         <FooterStyle>

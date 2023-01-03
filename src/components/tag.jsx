@@ -26,7 +26,7 @@ const CtnTag = styled.div`
         }
     }
 `
-
+/* Generate simple tag component*/
 function Tag({ tag }) {
     return (
         <CtnTag>

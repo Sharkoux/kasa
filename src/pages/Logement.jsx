@@ -76,11 +76,14 @@ const CtnCollapse = styled.div`
       flex-direction: column;
       }
 `
-
+/* Page Logement */
 function Logement() {
+    /* Call id with useParams and call data with useCallOne */
     const { id } = useParams()
     const { data, error } = useCallOne(id)
 
+
+    /* With data, generate page logement and all children component */
     return (
         <CtnLogement>
             <div>

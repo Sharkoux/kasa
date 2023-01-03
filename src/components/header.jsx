@@ -40,7 +40,7 @@ const DivStyled = styled.div`
         text-transform: uppercase;
     }
 `
-
+/* Header component */
 function Header() {
     const navLinkStyle = ({ isActive }) => {
         return {

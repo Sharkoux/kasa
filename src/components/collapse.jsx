@@ -43,7 +43,7 @@ const TxtCollapse = styled.div`
 const ArrowCollapse = styled.img`
     ${(props) => props.open && `transform: rotate(180deg)`}
 `
-
+/* Create Collapse component (toggle open/notopen) */
 function Collapse({ titre, texte }) {
     const [open, setOpen] = useState(false)
 

@@ -26,8 +26,10 @@ const HomeCard = styled.div`
      `
 
 function Home() {
+    /* Call data from Json */
     const { data } = useCallFetch()
 
+    /* Return Home container with Banner and map data to card component */ 
     return (
         <HomeContainer>
             <Banner image={image} texte="Chez vous, partout et ailleurs" />

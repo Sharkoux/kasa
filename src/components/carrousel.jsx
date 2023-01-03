@@ -74,15 +74,16 @@ const ArrowTwo = styled(Arrow)`
         left: 30px;
     }
 `
-
+/* Carrousel component */
 function Carrousel({ slides }) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const length = slides?.length
 
+    /* function slide index+ */
     const nextSlide = () => {
         setCurrentIndex(currentIndex === length - 1 ? 0 : currentIndex + 1)
     }
-
+    /*  function slide index- */
     const previousSlide = () => {
         setCurrentIndex(currentIndex === 0 ? length - 1 : currentIndex - 1)
     }
@@ -90,8 +91,9 @@ function Carrousel({ slides }) {
     if (!Array.isArray(slides) || slides.length <= 0) {
         return null
     }
-
-    return (
+   
+    /* return Slider with button + and -, and counter*/
+     return (
         <DivCarrousel>
             <ArrowTwo onClick={previousSlide}>
                 <img className="arrowImg" src={arrow}></img>

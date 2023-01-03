@@ -2,6 +2,8 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import Home from '../pages/Home'
 
+/* hook for fetch data from json */
+
 function useCallFetch() {
     const [data, setData] = useState([])
     const [error, setError] = useState(null)
