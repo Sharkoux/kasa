@@ -6,8 +6,7 @@ const DivCarrousel = styled.div`
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    margin-top: -50px;
-    justify-content: space-between;
+
     .slideContainer {
         display: flex;
         align-items: center;
@@ -40,6 +39,12 @@ const DivCarrousel = styled.div`
     }
     .containerImage {
         width: 100%;
+    }
+    .arrowContainer {
+        display: flex;
+        width: 100%;
+        margin-top: -50px;
+        justify-content: space-between;
     }
 `
 
@@ -77,6 +82,8 @@ const ArrowTwo = styled(Arrow)`
 /* Carrousel component */
 function Carrousel({ slides }) {
     const [currentIndex, setCurrentIndex] = useState(0)
+    const [visible, setVisible] = useState(true)
+
     const length = slides?.length
 
     /* function slide index+ */
@@ -91,19 +98,34 @@ function Carrousel({ slides }) {
     if (!Array.isArray(slides) || slides.length <= 0) {
         return null
     }
-   
-    if(slides.length === 1) {
 
+    const addArrow = () => {
+        setVisible(length === 1 ? false : true)
     }
-    /* return Slider with button + and -, and counter*/
-     return (
-        <DivCarrousel>
-            <ArrowTwo classonClick={previousSlide}>
-                <img className="arrowImg" src={arrow} alt="arrowRigth"></img>
-            </ArrowTwo>
-            <Arrow onClick={nextSlide}>
-                <img className="arrowImg" src={arrow} alt="arrowLeft"></img>
-            </Arrow>
+
+    /* return Slider with button + and -, and counter */
+    return (
+        <DivCarrousel onLoad={addArrow}>
+            {visible ? (
+                <div className="arrowContainer">
+                    <ArrowTwo className="arrow" onClick={previousSlide}>
+                        <img
+                            className="arrowImg"
+                            src={arrow}
+                            alt="arrowRigth"
+                        ></img>
+                    </ArrowTwo>
+                    <Arrow classname="arrow" onClick={nextSlide}>
+                        <img
+                            className="arrowImg"
+                            src={arrow}
+                            alt="arrowLeft"
+                        ></img>
+                    </Arrow>
+                </div>
+            ) : (
+                <div />
+            )}
             {slides.map((item, index) => {
                 return (
                     <div className="containerImage" key={index}>

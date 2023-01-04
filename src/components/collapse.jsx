@@ -50,7 +50,7 @@ function Collapse({ titre, texte }) {
     const toggle = () => {
         setOpen(!open)
     }
-
+   
     return (
         <DivCollapse>
             <BtnCollapse onClick={toggle}>
