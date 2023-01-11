@@ -3,21 +3,7 @@ import image from '../asset/Apropos.png'
 import Collapse from '../components/collapse'
 import styled from 'styled-components'
 
-const DivApropos = styled.div`
-    padding: 20px;
-    .CtnCollapse {
-        margin-left: 100px;
-        margin-right: 100px;
-        @media only screen and (max-width: 768px) {
-            margin-left: 40px;
-            margin-right: 40px;
-        }
-        @media only screen and (max-width: 425px) {
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-    }
-`
+
 /* Generate data  */
 const titre = ['Fiablité', 'Respect', 'Service', 'Responsabilité']
 const text =
@@ -26,14 +12,14 @@ const text =
 /* Return page Apropos and data for collapse */
 function Apropos() {
     return (
-        <DivApropos>
+        <div className="Container">
             <Banner image={image} />
             <div className="CtnCollapse">
                 {titre.map((item, index) => (
                     <Collapse titre={item} texte={text} key={index} />
                 ))}
             </div>
-        </DivApropos>
+        </div>
     )
 }
 

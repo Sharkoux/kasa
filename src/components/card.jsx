@@ -1,43 +1,13 @@
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-
-
-const StyleCard = styled(Link)`
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    position: relative;
-    margin-bottom: 50px;
-    height: 360px;
-    @media only screen and (max-width: 768px) {
-        width: 47%;
-    }
-    @media only screen and (max-width: 425px) {
-        width: 100%;
-    }
-`
-
-const StyleImg = styled.img`
-    object-fit: cover;
-    border-radius: 10px;
-    height: 100%;
-`
-const Styletxt = styled.p`
-    position: absolute;
-    bottom: 0;
-    margin: 20px;
-    color: white;
-    font-size: 18px;
-`
 
 /* Card component */
 
 function Card({ name, image, id }) {
     return (
-        <StyleCard to={`/logement/${id}`}>
-            <StyleImg src={image} />
-            <Styletxt>{name}</Styletxt>{' '}
-        </StyleCard>
+        <Link className="StyleCard" to={`/logement/${id}`}>
+            <img className="StyleImg" src={image} />
+            <p className="Styletxt">{name}</p>{' '}
+        </Link>
     )
 }
 

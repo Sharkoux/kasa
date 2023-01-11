@@ -1,0 +1,507 @@
+/* Globale Rules */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    font-size: 24px;
+    margin: auto;
+    max-width: 1700px;
+}
+a {
+    text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+}
+
+.Container {
+    padding: 20px;
+}
+
+/* Page Home Rules */
+
+.HomeCard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    padding: 50px;
+    margin-bottom: 30px;
+    gap: 5%;
+}
+
+@media only screen and (max-width: 768px) {
+    .HomeCard {
+        padding: 25px;
+    }
+}
+
+/* Page A propos Rules */
+
+.CtnCollapse {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+@media only screen and (max-width: 768px) {
+    .CtnCollapse {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .CtnCollapse {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* Page Erreur Rules */
+
+.Errordiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 96, 96, 1);
+    padding-bottom: 150px;
+}
+.TitleError {
+    font-size: 280px;
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+    .TitleError {
+        font-size: 200px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .TitleError {
+        font-size: 100px;
+    }
+}
+.TxtError {
+    font-size: 36px;
+    margin-bottom: 170px;
+    text-align: center;
+}
+@media only screen and (max-width: 768px) {
+    .TxtError {
+        font-size: 24px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .TxtError {
+        font-size: 18px;
+    }
+}
+
+.ErrorLink {
+    font-size: 18px;
+    color: rgba(255, 96, 96, 1);
+    text-decoration: underline;
+}
+@media only screen and (max-width: 425px) {
+    .ErrorLink {
+        font-size: 14px;
+    }
+}
+
+/* Page Logement Rules */
+
+.ctnLogement {
+    margin-bottom: 100px;
+    color: #ff6060;
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.localisation {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 0px;
+}
+
+.CtnProfils {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media only screen and (max-width: 768px) {
+    .CtnProfils {
+        flex-direction: column;
+    }
+}
+
+.ctnTitle {
+    width: 50%;
+}
+@media only screen and (max-width: 768px) {
+    .ctnTitle {
+        width: 100%;
+    }
+}
+
+.ctnpstar {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+@media only screen and (max-width: 768px) {
+    .ctnpstar {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.ctnProfil {
+    display: flex;
+    align-items: center;
+}
+@media only screen and (max-width: 425px) {
+    .ctnProfil {
+        font-size: 20px;
+    }
+}
+
+.imgProfil {
+    border-radius: 50%;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .imgProfil {
+        height: 100px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .imgProfil {
+        height: 80px;
+    }
+}
+
+.CtnCollapses {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+    .CtnCollapses {
+        gap: 40px;
+        flex-direction: column;
+    }
+}
+
+/* Header Rules */
+
+.HeaderStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .HeaderStyle {
+        margin: 20px;
+        padding-bottom: 0px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .HeaderStyle {
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .HeaderImg {
+        width: 145px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .HeaderImg {
+        width: 120px;
+    }
+}
+
+.DivStyled {
+    display: flex;
+    gap: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    .DivStyled {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .DivStyled {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}
+
+/* Footer Rules */
+
+.FooterStyle {
+    background-color: black;
+    color: white;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+}
+
+/* Banner Rules */
+
+.DivBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .DivBanner {
+        height: 150px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .DivBanner {
+        height: 120px;
+    }
+}
+
+.ImgBanner {
+    width: 100%;
+    border-radius: 25px;
+    filter: brightness(80%);
+    height: 100%;
+}
+
+.TxtBanner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 47px;
+    color: white;
+    margin: auto;
+    width: 70%;
+    padding-left: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+    .TxtBanner {
+        font-size: 24px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .TxtBanner {
+        font-size: 20px;
+        text-align: left;
+        padding: 0;
+    }
+}
+
+/* Card rules */
+
+.StyleCard {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    position: relative;
+    margin-bottom: 50px;
+    height: 360px;
+}
+
+@media only screen and (max-width: 768px) {
+    .StyleCard {
+        width: 47%;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .StyleCard {
+        width: 100%;
+    }
+}
+
+.StyleImg {
+    object-fit: cover;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.Styletxt {
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+    color: white;
+    font-size: 18px;
+}
+
+/* Carrousel Rules */
+
+.DivCarrousel {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.slideContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.slideImage {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 25px;
+    width: 100%;
+    @media only screen and (max-width: 425px) {
+        height: 350px;
+    }
+}
+.imgCount {
+    position: absolute;
+    top: 560px;
+    left: 50%;
+    color: white;
+}
+@media only screen and (max-width: 768px) {
+    .imgCount { 
+        top: 55%;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .imgCount {
+    top: 40%;
+    left: 47%;
+    font-size: 20px;
+    }
+}
+
+.containerImage {
+    width: 100%;
+}
+.arrowContainer {
+    display: flex;
+    width: 100%;
+    margin-top: -50px;
+    justify-content: space-between;
+}
+
+.Arrow {
+    position: relative;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+    top: 250px;
+    right: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+    .Arrow {
+         top: 235px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .Arrow { 
+    top: 200px;
+    right: 30px;
+    }
+}
+
+
+ @media only screen and (max-width: 768px) {
+        .arrowImg {
+             height: 60px;
+         }
+    }
+    @media only screen and (max-width: 425px) {
+            .arrowImg {
+                height: 30px;
+         }
+    }
+    
+.ArrowTwo {
+    transform: rotate(180deg);
+    left: 60px;
+}
+
+@media only screen and (max-width: 425px) {
+    .ArrowTwo {
+        left: 30px;
+    }
+}
+
+/* Collapse Rules */ 
+
+ .DivCollapse {
+    margin-bottom: 50px;
+    width: 100%;
+ }
+
+ .BtnCollapse {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 0;
+    background: #ff6060;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+ }
+
+ 
+ @media only screen and (max-width: 768px) {
+    .BtnCollapse {
+         font-size: 22px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .BtnCollapse {
+     font-size: 19px;
+    }
+} 
+
+.DivTxt {
+    background-color: #f6f6f6;
+    height: 100%;
+    padding: 30px;
+}
+
+.TxtCollapse {
+    margin: 0;
+    color: #ff6060;
+}
+@media only screen and (max-width: 425px) {
+    .TxtCollapse {
+        font-size: 14px;
+    }
+}
+
+.ArrowCollapse {
+    transform: rotate(180deg)
+}

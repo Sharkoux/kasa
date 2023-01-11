@@ -1,48 +1,6 @@
-import styled from 'styled-components'
 import arrow from '../asset/arrow.png'
 import React, { useState } from 'react'
 
-const DivCollapse = styled.div`
-    margin-bottom: 50px;
-    width: 100%;
-`
-
-const BtnCollapse = styled.button`
-    width: 100%;
-    height: 40px;
-    border-radius: 5px;
-    border: 0;
-    background: #ff6060;
-    color: white;
-    font-size: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    padding: 10px;
-    @media only screen and (max-width: 768px) {
-        font-size: 22px;
-    }
-    @media only screen and (max-width: 425px) {
-        font-size: 19px;
-    }
-`
-const DivTxt = styled.div`
-    background-color: #f6f6f6;
-    height: 100%;
-    padding: 30px;
-`
-
-const TxtCollapse = styled.div`
-    margin: 0;
-    color: #ff6060;
-    @media only screen and (max-width: 425px) {
-        font-size: 14px;
-    }
-`
-const ArrowCollapse = styled.img`
-    ${(props) => props.open && `transform: rotate(180deg)`}
-`
 /* Create Collapse component (toggle open/notopen) */
 function Collapse({ titre, texte }) {
     const [open, setOpen] = useState(false)
@@ -50,19 +8,27 @@ function Collapse({ titre, texte }) {
     const toggle = () => {
         setOpen(!open)
     }
-   
+
     return (
-        <DivCollapse>
-            <BtnCollapse onClick={toggle}>
+        <div className="DivCollapse">
+            <button className="BtnCollapse" onClick={toggle}>
                 {titre}
-                <ArrowCollapse src={arrow} open={open}></ArrowCollapse>
-            </BtnCollapse>
+                {open ? (
+                    <img
+                        className="ArrowCollapse"
+                        src={arrow}
+                        open={open}
+                    ></img>
+                ) : (
+                    <img src={arrow} open={open}></img>
+                )}
+            </button>
             {open && (
-                <DivTxt>
-                    <TxtCollapse>{texte}</TxtCollapse>
-                </DivTxt>
+                <div className="DivTxt">
+                    <div className="TxtCollapse">{texte}</div>
+                </div>
             )}
-        </DivCollapse>
+        </div>
     )
 }
 
