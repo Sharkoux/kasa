@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom'
 import React from 'react'
 import logo from '../asset/LOGO.png'
 
-
 /* Header component */
 function Header() {
     const navLinkStyle = ({ isActive }) => {
@@ -13,7 +12,7 @@ function Header() {
     }
 
     return (
-        <header className='HeaderStyle'>
+        <header className="HeaderStyle">
             <img className="HeaderImg" src={logo} alt="logo" />
             <div className="DivStyled">
                 <NavLink to="/" style={navLinkStyle}>

@@ -1,8 +1,6 @@
 import Banner from '../components/banner'
 import image from '../asset/Apropos.png'
 import Collapse from '../components/collapse'
-import styled from 'styled-components'
-
 
 /* Generate data  */
 const titre = ['Fiablité', 'Respect', 'Service', 'Responsabilité']

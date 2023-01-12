@@ -71,30 +71,10 @@ a {
     margin-top: 120px;
     margin-bottom: 20px;
 }
-@media only screen and (max-width: 768px) {
-    .TitleError {
-        font-size: 200px;
-    }
-}
-@media only screen and (max-width: 425px) {
-    .TitleError {
-        font-size: 100px;
-    }
-}
 .TxtError {
     font-size: 36px;
     margin-bottom: 170px;
     text-align: center;
-}
-@media only screen and (max-width: 768px) {
-    .TxtError {
-        font-size: 24px;
-    }
-}
-@media only screen and (max-width: 425px) {
-    .TxtError {
-        font-size: 18px;
-    }
 }
 
 .ErrorLink {
@@ -102,7 +82,22 @@ a {
     color: rgba(255, 96, 96, 1);
     text-decoration: underline;
 }
+
+@media only screen and (max-width: 768px) {
+    .TitleError {
+        font-size: 200px;
+    }
+    .TxtError {
+        font-size: 24px;
+    }
+}
 @media only screen and (max-width: 425px) {
+    .TitleError {
+        font-size: 100px;
+    }
+    .TxtError {
+        font-size: 18px;
+    }
     .ErrorLink {
         font-size: 14px;
     }
@@ -129,19 +124,9 @@ a {
     display: flex;
     flex-wrap: wrap;
 }
-@media only screen and (max-width: 768px) {
-    .CtnProfils {
-        flex-direction: column;
-    }
-}
 
 .ctnTitle {
     width: 50%;
-}
-@media only screen and (max-width: 768px) {
-    .ctnTitle {
-        width: 100%;
-    }
 }
 
 .ctnpstar {
@@ -150,39 +135,15 @@ a {
     flex-direction: column;
     align-items: flex-end;
 }
-@media only screen and (max-width: 768px) {
-    .ctnpstar {
-        width: 100%;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
 
 .ctnProfil {
     display: flex;
     align-items: center;
 }
-@media only screen and (max-width: 425px) {
-    .ctnProfil {
-        font-size: 20px;
-    }
-}
 
 .imgProfil {
     border-radius: 50%;
     margin: 10px;
-}
-
-@media only screen and (max-width: 768px) {
-    .imgProfil {
-        height: 100px;
-    }
-}
-@media only screen and (max-width: 425px) {
-    .imgProfil {
-        height: 80px;
-    }
 }
 
 .CtnCollapses {
@@ -193,9 +154,33 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+    .CtnProfils {
+        flex-direction: column;
+    }
+    .ctnTitle {
+        width: 100%;
+    }
+    .ctnpstar {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .imgProfil {
+        height: 100px;
+    }
     .CtnCollapses {
         gap: 40px;
         flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .ctnProfil {
+        font-size: 20px;
+    }
+    .imgProfil {
+        height: 80px;
     }
 }
 
@@ -211,40 +196,30 @@ a {
     margin-bottom: 40px;
 }
 
-@media only screen and (max-width: 768px) {
-    .HeaderStyle {
-        margin: 20px;
-        padding-bottom: 0px;
-    }
-}
-@media only screen and (max-width: 425px) {
-    .HeaderStyle {
-        margin: 5px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .HeaderImg {
-        width: 145px;
-    }
-}
-@media only screen and (max-width: 425px) {
-    .HeaderImg {
-        width: 120px;
-    }
-}
-
 .DivStyled {
     display: flex;
     gap: 25px;
 }
 
 @media only screen and (max-width: 768px) {
+    .HeaderStyle {
+        margin: 20px;
+        padding-bottom: 0px;
+    }
+    .HeaderImg {
+        width: 145px;
+    }
     .DivStyled {
         font-size: 20px;
     }
 }
 @media only screen and (max-width: 425px) {
+    .HeaderStyle {
+        margin: 5px;
+    }
+    .HeaderImg {
+        width: 120px;
+    }
     .DivStyled {
         font-size: 12px;
         text-transform: uppercase;
@@ -277,17 +252,6 @@ a {
     position: relative;
 }
 
-@media only screen and (max-width: 768px) {
-    .DivBanner {
-        height: 150px;
-    }
-}
-@media only screen and (max-width: 425px) {
-    .DivBanner {
-        height: 120px;
-    }
-}
-
 .ImgBanner {
     width: 100%;
     border-radius: 25px;
@@ -308,11 +272,17 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+    .DivBanner {
+        height: 150px;
+    }
     .TxtBanner {
         font-size: 24px;
     }
 }
 @media only screen and (max-width: 425px) {
+    .DivBanner {
+        height: 120px;
+    }
     .TxtBanner {
         font-size: 20px;
         text-align: left;
@@ -331,17 +301,6 @@ a {
     height: 360px;
 }
 
-@media only screen and (max-width: 768px) {
-    .StyleCard {
-        width: 47%;
-    }
-}
-@media only screen and (max-width: 425px) {
-    .StyleCard {
-        width: 100%;
-    }
-}
-
 .StyleImg {
     object-fit: cover;
     border-radius: 10px;
@@ -354,6 +313,17 @@ a {
     margin: 20px;
     color: white;
     font-size: 18px;
+}
+
+@media only screen and (max-width: 768px) {
+    .StyleCard {
+        width: 47%;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .StyleCard {
+        width: 100%;
+    }
 }
 
 /* Carrousel Rules */
@@ -385,18 +355,6 @@ a {
     left: 50%;
     color: white;
 }
-@media only screen and (max-width: 768px) {
-    .imgCount { 
-        top: 55%;
-    }
-}
-@media only screen and (max-width: 425px) {
-    .imgCount {
-    top: 40%;
-    left: 47%;
-    font-size: 20px;
-    }
-}
 
 .containerImage {
     width: 100%;
@@ -417,49 +375,48 @@ a {
     right: 60px;
 }
 
-@media only screen and (max-width: 768px) {
-    .Arrow {
-         top: 235px;
-    }
-}
-@media only screen and (max-width: 425px) {
-    .Arrow { 
-    top: 200px;
-    right: 30px;
-    }
-}
-
-
- @media only screen and (max-width: 768px) {
-        .arrowImg {
-             height: 60px;
-         }
-    }
-    @media only screen and (max-width: 425px) {
-            .arrowImg {
-                height: 30px;
-         }
-    }
-    
 .ArrowTwo {
     transform: rotate(180deg);
     left: 60px;
 }
 
+@media only screen and (max-width: 768px) {
+    .imgCount {
+        top: 55%;
+    }
+    .Arrow {
+        top: 235px;
+    }
+    .arrowImg {
+        height: 60px;
+    }
+}
 @media only screen and (max-width: 425px) {
+    .imgCount {
+        top: 40%;
+        left: 47%;
+        font-size: 20px;
+    }
+    .Arrow {
+        top: 200px;
+        right: 30px;
+    }
+    .arrowImg {
+        height: 30px;
+    }
     .ArrowTwo {
         left: 30px;
     }
 }
 
-/* Collapse Rules */ 
+/* Collapse Rules */
 
- .DivCollapse {
+.DivCollapse {
     margin-bottom: 50px;
     width: 100%;
- }
+}
 
- .BtnCollapse {
+.BtnCollapse {
     width: 100%;
     height: 40px;
     border-radius: 5px;
@@ -472,19 +429,7 @@ a {
     align-items: center;
     cursor: pointer;
     padding: 10px;
- }
-
- 
- @media only screen and (max-width: 768px) {
-    .BtnCollapse {
-         font-size: 22px;
-    }
 }
-@media only screen and (max-width: 425px) {
-    .BtnCollapse {
-     font-size: 19px;
-    }
-} 
 
 .DivTxt {
     background-color: #f6f6f6;
@@ -496,12 +441,76 @@ a {
     margin: 0;
     color: #ff6060;
 }
+
+.ArrowCollapse {
+    transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 768px) {
+    .BtnCollapse {
+        font-size: 22px;
+    }
+}
 @media only screen and (max-width: 425px) {
+    .BtnCollapse {
+        font-size: 19px;
+    }
     .TxtCollapse {
         font-size: 14px;
     }
 }
 
-.ArrowCollapse {
-    transform: rotate(180deg)
+/* star rules */
+
+.CtnStar {
+    margin-top: 20px;
+}
+
+.ImgStar {
+    height: 36px;
+}
+
+@media only screen and (max-width: 768px) {
+    .ImgStar {
+        height: 30px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .ImgStar {
+        height: 20px;
+    }
+}
+
+/* Tag rules */
+
+.CtnTag {
+    display: flex;
+}
+
+.tag {
+    font-size: 14px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #ff6060;
+    color: white;
+    min-height: 25px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .tag {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .tag {
+        font-size: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }

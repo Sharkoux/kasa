@@ -1,20 +1,6 @@
-import styled from 'styled-components'
 import React from 'react'
 import StarON from '../asset/StarOn.png'
 import StarOff from '../asset/star.png'
-
-const ImgStar = styled.img`
-    height: 36px;
-    @media only screen and (max-width: 768px) {
-        height: 30px;
-    }
-    @media only screen and (max-width: 425px) {
-        height: 20px;
-    }
-`
-const CtnStar = styled.div`
-    margin-top: 20px;
-`
 
 /*  Component star, generate star with rating data */
 function Star({ rating }) {
@@ -22,15 +8,25 @@ function Star({ rating }) {
     const actStar = rating
 
     return (
-        <CtnStar>
+        <div className="CtnStar">
             {[...new Array(totalStar)].map((item, index) => {
                 return index < actStar ? (
-                    <ImgStar src={StarON} key={index}></ImgStar>
+                    <img
+                        className="ImgStar"
+                        src={StarON}
+                        key={index}
+                        alt="ImageStar"
+                    ></img>
                 ) : (
-                    <ImgStar src={StarOff} key={index}></ImgStar>
+                    <img
+                        className="ImgStar"
+                        src={StarOff}
+                        key={index}
+                        alt="ImageStar"
+                    ></img>
                 )
             })}
-        </CtnStar>
+        </div>
     )
 }
 

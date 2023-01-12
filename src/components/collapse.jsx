@@ -18,9 +18,10 @@ function Collapse({ titre, texte }) {
                         className="ArrowCollapse"
                         src={arrow}
                         open={open}
+                        alt="ArrowSlide"
                     ></img>
                 ) : (
-                    <img src={arrow} open={open}></img>
+                    <img src={arrow} open={open} alt="ArrowSlide"></img>
                 )}
             </button>
             {open && (

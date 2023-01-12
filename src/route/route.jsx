@@ -22,7 +22,6 @@ const router = createBrowserRouter([
             {
                 path: '/logement/:id',
                 element: <Logement />,
-                errorElement: <Erreur />,
             },
             {
                 path: '*',
@@ -32,12 +31,8 @@ const router = createBrowserRouter([
     },
 ])
 
-
 function Route() {
-
-   return (
-        <RouterProvider router={router} />
-   )
+    return <RouterProvider router={router} />
 }
 
 export default Route

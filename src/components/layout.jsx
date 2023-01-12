@@ -4,7 +4,6 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import '../styles/main.css'
 
-
 /* Use Layout component with Header and Footer */
 const Layout = ({ children }) => {
     return (

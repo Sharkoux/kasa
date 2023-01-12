@@ -4,16 +4,15 @@ import Card from '../components/card'
 import useCallFetch from '../hook/useCallFetch'
 import image from '../asset/banner.png'
 
-
 function Home() {
     /* Call data from Json */
     const { data } = useCallFetch()
 
     /* Return Home container with Banner and map data to card component */
     return (
-        <div className='Container'>
+        <div className="Container">
             <Banner image={image} texte="Chez vous, partout et ailleurs" />
-            <div className='HomeCard'>
+            <div className="HomeCard">
                 {data.map((item) => (
                     <Card
                         key={item.id}

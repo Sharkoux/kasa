@@ -7,18 +7,24 @@ function useCallOne(id) {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        fetch('/logements.json')
-            .then((response) => response.json())
-            .then((actualData) => {
-                /* Use find for call data with good id */
-                const data = actualData.find((item) => item.id === id)
+        async function fetchdata() {
+            await fetch('/logements.json')
+                .then((response) => response.json())
+                .then((actualData) => {
+                    /* Use find for call data with good id */
+                    const data = actualData.find((item) => item.id === id)
+                    if (data === undefined) {
+                        throw new Response('Not Found', { status: 404 })
+                    }
+                    setData(data)
+                })
+                .catch((err) => {
+                    setError(err)
+                })
+        }
+        fetchdata()
+    }, [id])
 
-                setData(data)
-            })
-            .catch((err) => {
-                setError(err)
-            })
-    })
     return { data, error }
 }
 
